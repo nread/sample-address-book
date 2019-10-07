@@ -1,0 +1,7 @@
+<h2>Welcome to the Sample Address Book!</h2>
+{% if user.is_authenticated %}
+  Hello, {{ user.username }}.
+  <a href="{% url 'logout' %}" style="pull-right">Logout</a>
+{% else %}
+  Not Authenticated. Please login <a href="{% url 'login' %}" style="pull-right">here</a>.
+{% endif %}
